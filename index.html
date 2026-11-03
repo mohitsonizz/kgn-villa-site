@@ -249,13 +249,13 @@
         <img class="card-logo" src="logo.png" alt="KGN Villa" data-logo>
         <p>M57M+W8X, Jhanda Khurd, Punjab,<br>151507, India</p>
         <a class="btn" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=M57M+W8X,+Jhanda+Khurd,+Punjab+151507">
+           href="https://www.google.com/maps/search/?api=1&query=KGN+Villa,+M57M+W8X,+Jhanda+Khurd,+Punjab+151507">
            Open in Google Maps
         </a>
       </div>  
       <div class="map">
         <iframe loading="lazy" title="KGN Villa location"
-          src="https://www.google.com/maps?q=M57M+W8X,+Jhanda+Khurd,+Punjab+151507&output=embed"></iframe>
+          src="https://www.google.com/maps?q=KGN+Villa,+M57M+W8X,+Jhanda+Khurd,+Punjab+151507&output=embed"></iframe>
       </div>
     </div>
   </section>
@@ -264,20 +264,5 @@
     <p>© KGN Villa · Jhanda Khurd, Punjab</p>
   </footer>
 
-<script>
-  // Logo auto-fix: tries common file names/extensions; hides if none found
-  (function(){
-    var names=["logo.png","logo.jpg","logo.jpeg","logo.webp","Logo.png","Logo.jpg","Logo.jpeg","LOGO.png","LOGO.jpg","logo.PNG","logo.JPG"];
-    document.querySelectorAll("img[data-logo]").forEach(function(img){
-      var i=0;
-      img.onerror=function(){
-        i++;
-        if(i<names.length){ img.src=names[i]; }
-        else { img.onerror=null; img.style.display="none"; }
-      };
-      img.src=names[0];
-    });
-  })();
-</script>
 </body>
 </html>
