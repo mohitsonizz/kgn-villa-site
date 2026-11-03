@@ -266,10 +266,18 @@
            Open in Google Maps
         </a>
       </div>  
-      <div class="map">
-        <iframe loading="lazy" title="KGN Villa location"
-          src="https://www.google.com/maps?q=KGN+Villa,+M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507&output=embed"></iframe>
-      </div>
+      <div class="map" style="position: relative; overflow: hidden; cursor: pointer;">
+  <!-- Google Map Display -->
+  <iframe loading="lazy" title="KGN Villa location"
+    src="https://maps.google.com/maps?q=KGN+Villa,+M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507&output=embed"
+    style="pointer-events: none; width: 100%; height: 100%; min-height: 260px; border: 0;"></iframe>
+
+  <!-- Click Overlay: Isse pure map ya "Open in Maps" par click karne par exact single pin wala page khulega -->
+  <a href="https://www.google.com/maps/search/?api=1&query=KGN+Villa,+M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507"
+     target="_blank" rel="noopener"
+     style="position: absolute; inset: 0; z-index: 10; display: block; width: 100%; height: 100%;"
+     title="Open KGN Villa in Google Maps"></a>
+    </div>
     </div>
   </section>
 
