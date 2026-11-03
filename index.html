@@ -46,8 +46,8 @@
   /* HERO */
   .hero{
     position:relative;
-    height:78vh;
-    min-height:480px;
+    height:auto;
+    min-height:auto;
     background:
       linear-gradient(to bottom, rgba(20,15,5,.55) 0%, rgba(20,15,5,.15) 45%, rgba(250,243,224,1) 100%),
       url("house.jpg") center/cover no-repeat;
@@ -210,15 +210,15 @@
 
   /* TABLET + DESKTOP */
   @media (min-width:768px){
-    .hero{min-height:520px; gap:16px;}
-    section{padding:50px 32px}
+    .hero{min-height:auto; gap:12px; padding-bottom:15px:}
+    section{padding:15px 32px 35px:}
     .grid{grid-template-columns:1fr 1.3fr}
     .card{padding:40px 28px}
     .map{min-height:340px}
     .map iframe{min-height:340px}
   }
   @media (min-width:1200px){
-    .hero{height:92vh}
+    .hero{height:auto}
   }
   /* Short landscape phones */
   @media (max-height:500px) and (orientation:landscape){
