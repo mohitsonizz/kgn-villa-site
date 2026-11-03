@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#F7EFDC">
 <title>KGN Villa</title>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -14,15 +15,16 @@
   "image": "https://kgnvilla.in/house.jpg",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "M57M+W8X"
+    "streetAddress": "M57M+W8X",
     "addressLocality": "Jhanda Khurd",
     "addressRegion": "Punjab",
     "postalCode": "151507",
     "addressCountry": "IN"
   },
-  "hasMap": "https://www.google.com/maps/search/?api=1&query=M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507"
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=KGN+Villa,+M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507"
 }
 </script>  
+
 <style>
   :root{
     --cream:#FAF3E0;
@@ -54,7 +56,7 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding:max(24px, env(safe-area-inset-top)) 20px ;
+    padding:max(24px, env(safe-area-inset-top)) 20px 15px;
     text-align:center;
   }
   .logo{
@@ -65,7 +67,7 @@
     animation:fade 1.2s ease both;
   }
   .hero-text{
-    margin-top:200px;
+    margin-top:18px; /* Fixed: 200px se hatakar 18px kiya */
     padding-bottom:5px;
     animation:rise 1.2s .2s ease both;
   }
@@ -74,13 +76,13 @@
     letter-spacing:4px;
     text-transform:uppercase;
     color:var(--gold-dark);
+    animation:blink 2.4s ease-in-out infinite;
   }
   .hero-text h1{
     font-size:clamp(38px, 9vw, 72px);
     font-weight:700;
     margin-top:6px;
     letter-spacing:2px;
-    /* gold shimmer sweeping across the text */
     background:linear-gradient(110deg,#8a6a1f 0%,#C9A24B 30%,#FFF2B8 50%,#C9A24B 70%,#8a6a1f 100%);
     background-size:250% 100%;
     -webkit-background-clip:text;
@@ -89,8 +91,12 @@
     color:transparent;
     animation:shimmer 3s linear infinite, glow 2s ease-in-out infinite;
   }
-  .hero-text .welcome{animation:blink 2.4s ease-in-out infinite}
-  .divider i{animation:twinkle 1.6s ease-in-out infinite}
+  .divider{
+    display:flex;align-items:center;justify-content:center;
+    gap:10px;margin:14px auto 0;width:min(70%, 320px);
+  }
+  .divider span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .divider i{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);display:block;animation:twinkle 1.6s ease-in-out infinite}
   .pin{animation:pulse 2s ease-in-out infinite}
 
   @keyframes shimmer{from{background-position:150% 0}to{background-position:-100% 0}}
@@ -107,18 +113,12 @@
     0%,100%{box-shadow:0 4px 10px rgba(156,122,42,.35)}
     50%{box-shadow:0 0 0 8px rgba(201,162,75,.18),0 4px 16px rgba(201,162,75,.7)}
   }
-  .divider{
-    display:flex;align-items:center;justify-content:center;
-    gap:10px;margin:14px auto 0;width:min(70%, 320px);
-  }
-  .divider span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-  .divider i{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);display:block}
 
   /* CONTENT */
   section{
     max-width:1000px;
     margin:0 auto;
-    padding:10px 22px;
+    padding:10px 22px 30px;
   }
   .title{
     text-align:center;
@@ -205,13 +205,12 @@
     background:linear-gradient(to bottom,var(--cream),var(--cream-dark));
     border-top:1px solid var(--gold-light);
   }
-  footer img{width:120px;height:auto;margin-bottom:10px}
   footer p{font-size:13px;color:var(--gold-dark);letter-spacing:1px}
 
   /* TABLET + DESKTOP */
   @media (min-width:768px){
-    .hero{min-height:auto; gap:12px; padding-bottom:15px:}
-    section{padding:15px 32px 35px:}
+    .hero{min-height:auto; gap:12px; padding-bottom:15px;}
+    section{padding:15px 32px 35px;}
     .grid{grid-template-columns:1fr 1.3fr}
     .card{padding:40px 28px}
     .map{min-height:340px}
@@ -220,7 +219,6 @@
   @media (min-width:1200px){
     .hero{height:auto}
   }
-  /* Short landscape phones */
   @media (max-height:500px) and (orientation:landscape){
     .hero{height:auto;min-height:100vh}
   }
@@ -247,15 +245,15 @@
       <div class="card">
         <div class="pin">📍</div>
         <img class="card-logo" src="logo.png" alt="KGN Villa" data-logo>
-        <p>M57M+W8X, Jhanda Khurd, Punjab,<br>151507, India</p>
+        <p><strong>KGN Villa</strong><br>M57M+W8X, Jhanda Khurd,<br>Punjab 151507, India</p>
         <a class="btn" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=KGN+Villa,+M57M+W8X,+Jhanda+Khurd,+Punjab+151507">
+           href="https://www.google.com/maps/search/?api=1&query=KGN+Villa,+M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507">
            Open in Google Maps
         </a>
       </div>  
       <div class="map">
         <iframe loading="lazy" title="KGN Villa location"
-          src="https://www.google.com/maps?q=KGN+Villa,+M57M+W8X,+Jhanda+Khurd,+Punjab+151507&output=embed"></iframe>
+          src="https://www.google.com/maps?q=KGN+Villa,+M57M%2BW8X,+Jhanda+Khurd,+Punjab+151507&output=embed"></iframe>
       </div>
     </div>
   </section>
